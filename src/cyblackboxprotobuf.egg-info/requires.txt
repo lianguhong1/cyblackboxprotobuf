@@ -1,0 +1,4 @@
+six>=1.16
+
+[test]
+protobuf>=3.20

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyblackboxprotobuf"
+version = "0.1.1"
+description = "Pure Python tools for decoding and encoding protobuf messages without schemas"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+dependencies = ["six>=1.16"]
+keywords = ["protobuf", "reverse-engineering"]
+
+[project.optional-dependencies]
+test = ["protobuf>=3.20"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cyblackboxprotobuf = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
